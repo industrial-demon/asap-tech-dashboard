@@ -1,0 +1,20 @@
+import type { Meta, StoryObj } from '@storybook/react'
+import { withRouter } from 'storybook-addon-react-router-v6'
+import { NavPanel } from './nav-panel'
+import { routes } from '~/shared/config/routes'
+
+const meta: Meta<typeof NavPanel> = {
+  component: NavPanel,
+  decorators: [withRouter],
+}
+
+export default meta
+type Story = StoryObj<typeof NavPanel>
+
+export const NavPanelGreen: Story = {
+  render: () => (
+    <div className="flex gap-7">
+      <NavPanel routes={routes} />
+    </div>
+  ),
+}

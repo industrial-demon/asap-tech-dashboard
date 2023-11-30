@@ -1,17 +1,17 @@
-import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
-import { Providers } from "~/providers/providers";
+import type { Metadata } from 'next'
+import { Manrope } from 'next/font/google'
+import { ThemeProvider } from '~/providers/theme.provider'
 
-import "./globals.css";
-import { Header } from "~/components/header/header";
+import './globals.css'
+import { Header } from '~/components/header/header'
 // import '@radix-ui/themes/styles.css';
 
-const manrope = Manrope({ subsets: ["latin"] });
+const manrope = Manrope({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Asap Tech",
-  description: "dashboard",
-};
+  title: 'Asap Tech',
+  description: 'dashboard',
+}
 
 export default function RootLayout({
   children,
@@ -21,12 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={manrope.className}>
-      
-        <Providers>
-          <Header />
-          {children}
-          
-          </Providers>
+        <ThemeProvider>
+          <main className="h-full dark:bg-green-300">
+            <Header/>
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
