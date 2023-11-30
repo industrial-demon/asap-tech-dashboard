@@ -1,5 +1,3 @@
-
-
 import { ReactNode } from "react";
 // import { useTheme } from '../../shared/providers/theme-provider'
 import { UserDropdown } from "~/ui-kit/lib/user-dropdown/user-dropdown";
