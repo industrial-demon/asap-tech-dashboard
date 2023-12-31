@@ -9,7 +9,7 @@ const SvgCheckIcon = (props: SVGProps<SVGSVGElement>) => (
     {...props}
   >
     <path
-      fill="#fff"
+      fill="currentColor"
       d="m5.334 8.643 7.66-7.66 1.179 1.178L5.333 11 .03 5.697 1.21 4.518l4.125 4.125"
     />
   </svg>

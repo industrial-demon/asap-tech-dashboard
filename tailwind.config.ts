@@ -8,22 +8,27 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/features/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        'grey-10': '#F0F2F4',
-        'grey-20': '#DFE6E9',
-        'grey-30': '#BEBEBE',
-        'grey-40': '#939191',
-        'grey-50': '#7A7A7A',
-        'grey-60': '#2F3237',
-        'grey-70': '#2D3436',
-        'grey-80': '#1E2024',
-        'grey-90': '#17191D',
+        'white-1': ' rgba(255, 255, 255, 0.90)',
+        'grey-10': 'hsl(210, 15%, 95%)',
+        'grey-20': 'hsla(198, 19%, 89%, 1)',
+        'grey-30': 'hsl(0, 0%, 75%)',
+        'grey-40': 'hsl(0, 1%, 57%)',
+        'grey-50': 'hsl(0, 0%, 48%)',
+        'grey-55': 'hsla(0, 0%, 46%, 1)',
+        'grey-60': 'hsl(218, 8%, 20%)',
+        'grey-70': 'hsl(193, 9%, 19%)',
+        'grey-80': 'hsl(220, 9%, 13%)',
+        'grey-90': 'hsl(220, 12%, 10%)',
         'black-60': 'hsla(0, 0%, 50%, 0.467)',
-        'green-60': '#0F9D58',
-        'blue-20': '#F3FFF9',
+        'green-60': 'hsl(151, 83%, 34%)',
+        'green-10': 'hsla(151, 83%, 34%, 1)',
+        'blue-20': 'hsl(150, 100%, 98%)',
+       
       },
 
       gridTemplateColumns: {

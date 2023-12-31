@@ -190,6 +190,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   },
 )
 
+Button.displayName = "Button"
+
 const buttonSpin = (
   <svg
     className="-ml-1 mr-3 h-5 w-5 animate-spin"
@@ -212,3 +214,4 @@ const buttonSpin = (
     ></path>
   </svg>
 )
+

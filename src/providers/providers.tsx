@@ -1,25 +1,29 @@
-"use client";
-import { ReactNode, useEffect, useState } from "react";
-import { Theme } from "@radix-ui/themes";
-import { ThemeProvider } from "next-themes";
-
+'use client'
+import { ReactNode, useEffect, useState } from 'react'
+import { Theme } from '@radix-ui/themes'
+import { ThemeProvider } from 'next-themes'
+import { SessionProvider } from 'next-auth/react'
 
 export const Providers = ({ children }: { children: ReactNode }) => {
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    setMounted(true)
+  }, [])
 
   if (!mounted) {
-    return <>{children}</>;
+    return <>{children}</>
   }
 
   return (
-    <ThemeProvider defaultTheme="dark" enableColorScheme={false} attribute="class">
+    <ThemeProvider
+      defaultTheme="dark"
+      enableColorScheme={false}
+      attribute="class"
+    >
       {/* <Theme> */}
-        {children}
+      {children}
       {/* </Theme> */}
     </ThemeProvider>
-  );
-};
+  )
+}

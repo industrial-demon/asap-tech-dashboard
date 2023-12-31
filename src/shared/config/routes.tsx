@@ -1,38 +1,40 @@
 import { v4 as uuidv4 } from 'uuid'
-import DashboardIcon from '~/icons/dashboard.svg'
-import ManageIcon from '~/icons/manage.svg'
-import MonitorIcon from '~/icons/monitor.svg'
-import ConnectionsIcon from '~/icons/connections.svg'
-import AdminIcon from '~/icons/admin.svg'
+import {
+  AdminIcon,
+  ConnectionsIcon,
+  DashboardIcon,
+  ManageIcon,
+  MonitorIcon,
+} from '~/icons'
 
 export const routes = [
   {
-    href: 'dashboard',
+    href: '/dashboard',
     title: 'Dashboard',
     icon: <DashboardIcon />,
     id: uuidv4(),
   },
   {
-    href: 'manage',
+    href: '/dashboard/manage',
     title: 'Manage',
     icon: <ManageIcon />,
     id: uuidv4(),
   },
   {
-    href: 'monitor',
+    href: '/dashboard/monitor',
     title: 'Monitor',
     icon: <MonitorIcon />,
     id: uuidv4(),
   },
 
   {
-    href: 'connections',
+    href: '/dashboard/connections',
     title: 'Connections',
     icon: <ConnectionsIcon />,
     id: uuidv4(),
   },
   {
-    href: 'admin',
+    href: 'dashboard/admin',
     title: 'Admin',
     icon: <AdminIcon />,
     id: uuidv4(),

@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 import { cx } from 'class-variance-authority'
 import * as ToggleGroup from '@radix-ui/react-toggle-group'
 
-import { SidebarFilterContainer } from '../sidebar-filter-container/sidebar-filter-container'
+import { SidebarFilterContainer } from '../../../src/features/layouts/sidebar-filter.layout'
 
 const ToggleFn = ({
   entityName,

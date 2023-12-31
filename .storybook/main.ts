@@ -1,5 +1,5 @@
 import type { StorybookConfig } from '@storybook/nextjs'
-import path from 'path';
+import path from 'path'
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -8,7 +8,7 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@storybook/addon-onboarding',
     '@storybook/addon-interactions',
-    'storybook-addon-react-router-v6'
+    'storybook-addon-react-router-v6',
   ],
   framework: {
     name: '@storybook/nextjs',
@@ -17,14 +17,35 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
-  webpackFinal: async (config) => {
+
+ async babel (config, options) {
+    return {
+      ...config,
+      plugins: Array.isArray(config.plugins)
+        ? [
+            ...config.plugins,
+            ['@babel/plugin-proposal-decorators', { lagacy: true }],
+            ['babel-plugin-transform-object-rest-spread'],
+          ]
+        : [],
+
+      presets: Array.isArray(config.presets)
+        ? [
+            ...config.presets,
+            '@babel/preset-react',
+            ['@babel/preset-env', { targets: { node: 'current' } }],
+          ]
+        : [],
+    }
+  },
+  webpackFinal: async config => {
     if (config.resolve) {
       config.resolve.alias = {
         ...config.resolve.alias,
         '~': path.resolve(__dirname, '../src'),
-      };
+      }
     }
-    return config;
+    return config
   },
 }
 export default config

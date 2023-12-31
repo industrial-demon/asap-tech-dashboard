@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    forceSwcTransforms: true,
+  },
   reactStrictMode: true,
   webpack: (config) => {
     // Configures webpack to handle SVG files with SVGR. SVGR optimizes and transforms SVG files

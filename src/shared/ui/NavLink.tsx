@@ -13,7 +13,7 @@ type Props = { id: string; title: string; icon: ReactNode } & Pick<
 
 export const NavLink = ({ href, title, icon, ...props }: Props) => {
   const path = usePathname()
-  const isActive = path.replace('/', '') === href
+  const isActive = path === href
   return (
     <Link href={href} passHref legacyBehavior>
       <NavigationMenu.Link

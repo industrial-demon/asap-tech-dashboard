@@ -1,4 +1,4 @@
-import Select from "../select/select";
+import Select from "../../../src/shared/ui/select/select";
 
 
 const perSize = [

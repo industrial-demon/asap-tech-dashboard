@@ -1,9 +1,5 @@
 
 
-
-export * from './lib/user-dropdown/user-dropdown'
-
-
 // export * from './lib/alert-dialog/alert-dialog'
 // export * from './lib/search-box/search-box'
 

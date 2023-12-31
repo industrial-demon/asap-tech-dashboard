@@ -31,7 +31,7 @@ export const Header = ({
           <div className="flex gap-5 items-center justify-between">
             <ThemeSwitcher theme={"dark"} />
             <div className="mr-4">
-              <UserDropdown
+              {/* <UserDropdown
                 src={imgSrc}
                 userNane="Joe SDfdvsdfdfgvdfdfvgdfd"
                 // onLogoutClick={login.mutate}
@@ -41,7 +41,7 @@ export const Header = ({
                 // onSettingClick={() => {
                 //   console.log("settings");
                 // }}
-              />
+              /> */}
             </div>
           </div>
         </div>

@@ -1,6 +1,11 @@
+import { Header } from '~/components/header/header'
+import { SearchBoxController } from '~/features/search-box'
 
 export default async function Dashboard() {
   return (
-    <h1>Dash</h1>
+    <>
+      <SearchBoxController />
+      <h1>Dash</h1>
+    </>
   )
 }

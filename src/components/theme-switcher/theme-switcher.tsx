@@ -6,6 +6,7 @@ import { cx } from 'class-variance-authority'
 import { useTheme } from 'next-themes'
 import { MoonIcon, SunIcon } from '~/icons'
 
+
 type Props = {
   theme: 'dark' | 'light'
 } & SwitchPrimitives.SwitchProps
@@ -19,7 +20,6 @@ export const ThemeSwitcher = ({
   const a = useThemeContext()
   const t = useTheme()
   const isDark = t.theme === 'dark'
-  console.log(a)
 
   return (
     <SwitchPrimitives.Root
