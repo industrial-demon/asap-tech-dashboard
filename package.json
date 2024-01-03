@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "svgr": "npx -y @svgr/cli --out-dir src/icons --typescript -- src/icons/svg",
-    "generate:api-connections": "npx rimraf ./src/shared/api && npx @openapitools/openapi-generator-cli generate -c ./openapi/configs/connectuins.config.yaml"
+    "generate:api-connections": "npx @openapitools/openapi-generator-cli generate -c ./openapi/configs/connections.yaml --skip-validate-spec"
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.23.5",
@@ -22,8 +22,7 @@
     "jsonwebtoken": "^9.0.2",
     "mobx": "^6.12.0",
     "mobx-react-lite": "^4.0.5",
-    "next": "14.0.2",
-    "next-auth": "^4.24.5",
+    "next": "14.0.4",
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-beautiful-dnd": "^13.1.1",

@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { getConnections } from '~/api/connections'
+import { getConnections } from '~/cs/connections'
 import { ConnectionsList } from '~/widgets/connections-list'
 
 export default async function Connections() {

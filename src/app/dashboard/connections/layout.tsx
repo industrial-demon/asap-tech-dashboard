@@ -3,9 +3,5 @@ export default function ConnectionsLayout({
 }: {
   children: React.ReactNode
 }) {
-            
-  return <div className="b">
-
-    {children}
-  </div>
+  return <div className="b">{children}</div>
 }

@@ -30,7 +30,6 @@ export const authOptions: NextAuthOptions = {
         },
       },
       async authorize(credentials, request) {
-        console.log('Authorization')
         if (!credentials?.email || !credentials?.password) {
           return null
         }
@@ -40,7 +39,7 @@ export const authOptions: NextAuthOptions = {
           password: credentials.password,
         })
         const response = await fetch(
-          `http://localhost:4000/api/auth/local/signin`,
+          `${BackendURL}/api/auth/local/signin`,
           {
             method: 'POST',
             body: dto,
@@ -80,7 +79,7 @@ export const authOptions: NextAuthOptions = {
   ],
   callbacks: {
     async jwt(params) {
-      console.log(params)
+      console.log(params, 'JWT')
       if (params.user) {
         return { ...params.user, ...params.token }
       }

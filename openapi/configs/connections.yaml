@@ -1,0 +1,9 @@
+generatorName: typescript-fetch
+cleanupOutput: true
+inputSpec: http://localhost:3000/api/connections-docs-json
+useSingleRequestParameter: true
+enumPropertyNaming: 'UPPERCASE'
+outputDir: ./src/shared/api/generated/connections
+additionalProperties:
+  supportsES6: true
+  

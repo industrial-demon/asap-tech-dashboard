@@ -10,7 +10,7 @@ export default function DashboardLayout({
   return (
     <RootStoreProvider>
       <div className="dasboard">
-      <Header />
+      <Header navPanel={undefined} themeSwitcher={undefined} />
         Dashboard
         {children}
       </div>
